@@ -1,0 +1,94 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.control.CheckBox?>
+<GridPane fx:controller="sample.Form1Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="CENTER" hgap="10" vgap="10">
+    <HBox GridPane.columnIndex="0" GridPane.rowIndex="0" spacing="15">
+        <VBox GridPane.columnIndex="0" GridPane.rowIndex="0" >
+            <GridPane hgap="10" vgap="15">
+                <Label text="IDNV"
+                       fx:id="lbID"
+                       GridPane.columnIndex="0"
+                       GridPane.rowIndex="0"
+                />
+                <Label text="Họ và tên : "
+                       GridPane.columnIndex="0"
+                       GridPane.rowIndex="1"/>
+                <TextField fx:id="txtTen"
+                           GridPane.columnIndex="1"
+                           GridPane.rowIndex="1"
+                           prefWidth="225"/>
+                <Label
+                        text="Ngày tháng năm sinh : "
+                        GridPane.columnIndex="0"
+                        GridPane.rowIndex="2"/>
+                <DatePicker
+                        fx:id="date"
+                        GridPane.columnIndex="1"
+                        GridPane.rowIndex="2"
+                        prefWidth="225"/>
+                <Label
+                        text="Giới tính : "
+                        GridPane.columnIndex="0"
+                        GridPane.rowIndex="3"/>
+                <HBox spacing="50"
+                      GridPane.columnIndex="1"
+                      GridPane.rowIndex="3">
+                    <fx:define>
+                        <ToggleGroup fx:id="groupGioiTinh" />
+                    </fx:define>
+                    <children>
+                        <RadioButton text="Nam" toggleGroup="$groupGioiTinh" fx:id="rdNam"/>
+                        <RadioButton text="Nữ" toggleGroup="$groupGioiTinh" fx:id="rdNu"/>
+                    </children>
+                </HBox>
+                <Label
+                        text="Trình độ : "
+                        GridPane.columnIndex="0"
+                        GridPane.rowIndex="4"
+                />
+                <VBox
+                        GridPane.columnIndex="1"
+                        GridPane.rowIndex="4"
+                        spacing="10">
+
+                    <children>
+                        <CheckBox text="Tốt nghiệp phổ thông"  fx:id="chkPhoThong"/>
+                        <CheckBox text="tốt nghiệp đại học cao đẳng"  fx:id="chkCaoDang"/>
+                        <CheckBox text="tốt nghiệp sau đại học"  fx:id="chkSauDaiHoc"/>
+                    </children>
+                </VBox>
+            </GridPane>
+            <Label></Label>
+            <ProgressBar fx:id="progressBar" prefWidth="370" prefHeight="20" />
+            <Label></Label>
+            <HBox spacing="120">
+                <Button
+                        fx:id="btnOK"
+                        text="OK"
+                        prefWidth="125"
+                        prefHeight="30"
+                        onAction="#okClick"/>
+                <Button
+                        fx:id="btnCancel"
+                        text="Cancel"
+                        prefWidth="125"
+                        prefHeight="30"
+                        onAction="#cancelClick"/>
+            </HBox>
+        </VBox>
+        <FlowPane GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="flow">
+        </FlowPane>
+    </HBox>
+</GridPane>

@@ -1,0 +1,81 @@
+Button{
+    -fx-background-color:
+            #000000,
+            linear-gradient(#7ebcea, #2f4b8f),
+            linear-gradient(#426ab7, #263e75),
+            linear-gradient(#395cab, #223768);
+        -fx-background-insets: 0,1,2,3;
+        -fx-background-radius: 3,2,2,2;
+        -fx-padding: 12 30 12 30;
+        -fx-text-fill: white;
+        -fx-font-size: 12px;;
+}
+
+FlowPane{
+     -fx-background-color: #80DEEA;
+
+}
+Label{
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+}
+RadioButton{
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 12;
+}
+
+.check-box {
+	-fx-padding: 10;
+}
+
+.check-box .text {
+        -fx-text-fill: #1a237e;
+        -fx-font-weight: bold;
+        -fx-font: 12px Roboto;
+}
+
+.check-box>.box, .check-box>.box.unfocused, .check-box:disabled>.box,
+	.check-box:indeterminate>.box {
+	-fx-border-radius: 4.0;
+	-fx-border-color:  #e91e63;
+	-fx-border-width: 2;
+	-fx-background-radius: 4;
+	-fx-background-color: transparent;
+	-fx-padding: 1;
+}
+
+.check-box:selected>.box {
+	-fx-border-color:  #e91e63;
+	-fx-background-color: #fce4ec;
+}
+
+.check-box:focused>.box {
+	-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.30), 6.0, 0.3, 0,
+		0);
+}
+
+.check-box:selected>.box>.mark {
+	-fx-background-color: #3f51b5;
+}
+
+.check-box:indeterminate>.box>.mark {
+	-fx-background-color: #fce4ec;
+	-fx-padding: 0.45em;
+}
+
+.progress-bar > .bar {
+    -fx-background-color: linear-gradient(
+        from 0px .75em to .75em 0px,
+        repeat,
+        -fx-accent 0%,
+        -fx-accent 49%,
+        derive(-fx-accent, 30%) 50%,
+        derive(-fx-accent, 30%) 99%
+    );
+}
+.progress-bar > .track {
+  -fx-text-box-border: forestgreen;
+  -fx-control-inner-background: palegreen;
+}
